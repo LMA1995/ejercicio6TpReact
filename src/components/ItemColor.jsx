@@ -6,7 +6,15 @@ const ItemColor = ({color, borrarColor}) => {
         <div className='col-12 col-md-6 col-lg-4'>
             <div className='card shadow card-formato '>
             <div className='card-header text-center'>{color}</div>
-            <div className='card-body d-flex justify-content-center align-items-center'></div>
+            <div className='card-body d-flex justify-content-center align-items-center'>
+                <div style={{
+            width: "80px",
+            height: "80px",
+            backgroundColor: color
+          }}>
+
+                </div>
+            </div>
             <div className='card-footer text-center'>
                 <button className='btn btn-danger' onClick={()=>borrarColor(color)}>Borrar</button>
             </div>
