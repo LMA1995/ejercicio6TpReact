@@ -1,5 +1,4 @@
 import React from 'react';
-import './EstiloCards.css';
 
 const ItemColor = ({color, borrarColor}) => {
     return (
