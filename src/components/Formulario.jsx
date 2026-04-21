@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './EstiloFormulario.css';
 import ListaColores from './ListaColores';
 
 
 
 const Formulario = () => {
-  const [listaColores, setListaColor]=useState([])
+  const coloresLocalStorage= JSON.parse(localStorage.getItem('listaColoresKey'))|| []
+  const [listaColores, setListaColor]=useState(coloresLocalStorage)
   const [itemColor, setItemColor]= useState('')
+  useEffect (()=>
+  {
+    localStorage.setItem('listaColoresKey', JSON.stringify(listaColores))
+  },[listaColores])
+  
   const handleSubmit =(e)=>
   {
     e.preventDefault();
