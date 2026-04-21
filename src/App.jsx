@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Formulario from "./components/Formulario";
-import ListaColores from "./components/ListaColores";
+
 
 
 function App() {
